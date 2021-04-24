@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 export default function Form(props) {
   const router = useRouter();
-  const registerUser = async (event) => {
+  const loginUser = async (event) => {
     event.preventDefault();
 
-    const res = await fetch("/api/register", {
+    const res = await fetch("/api/login", {
       body: JSON.stringify({
         email: event.target.email.value,
         password: event.target.password.value,
@@ -28,7 +28,7 @@ export default function Form(props) {
     <div className = 'min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-'>
       <div className = 'max-w-md w-full space-y-8'>
         <h1 className = 'font-mono text-2xl font-bold flex justify-center'>SimpleDonate</h1>
-        <form className = 'mt-8 space-y-6 flex flex-col' onSubmit={registerUser}>
+        <form className = 'mt-8 space-y-6 flex flex-col' onSubmit={loginUser}>
           <label className = 'text-lg font-semibold' htmlFor="email">Email</label>
           <input
             id="email"
@@ -50,7 +50,7 @@ export default function Form(props) {
           <button type="submit" className = 'w-full sm:w-auto flex-none bg-blue-700 hover:bg-blue-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200'>Login →</button>
         </form>
         <Link href = '/'>
-          <a className = 'font-mono text-sm font-light flex text-gray-900 justify-center hover:text-gray-500'>Need An Account? Login →</a>
+          <a className = 'font-mono text-sm font-light flex text-gray-900 justify-center hover:text-gray-500'>Need An Account? Register →</a>
         </Link>
       </div>
     </div>
