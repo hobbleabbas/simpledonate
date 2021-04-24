@@ -49,7 +49,7 @@ export default function Form(props) {
           />
           <button type="submit" className = 'w-full sm:w-auto flex-none bg-blue-700 hover:bg-blue-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200'>Register →</button>
         </form>
-        <Link href = '/'>
+        <Link href = '/login'>
           <a className = 'font-mono text-sm font-light flex text-gray-900 justify-center hover:text-gray-500'>Have An Account? Sign In →</a>
         </Link>
       </div>
