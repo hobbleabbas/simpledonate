@@ -18,9 +18,7 @@ export default function Home() {
     <>
       <Navbar />
       <CauseHero title = "Donate to XYZ Cause" location = 'Zimbabawe, Ontario' tldr = 'This will do xyz, allowing the population of abc to idek' subtitle = "Make all of your donations in one place. See how much of your donation actually goes to charity, download tax receipts, and see proof of donation all in one place" />
-      
-      <About title = "What's the point?" explain  = "Unfortunately, there isn't a streamlined way to donate. Every charity has a different setup, where the money goes isn't transparent, and getting tax receipts is a pain. SimpleDonate fixes that." />
-      <ChoosePlan bPlan = '25' bInterval = 'Per Month' cPlan = '1000' cInterval = 'Once' />
+      <ChoosePlan bPlan = '25' cPlan = '1000' bBackers = '150' cBackers = '20'/>
       <About title = "We're Open Source" explain = "SimpleDonate is an open-source, non-profit project. If you'd like to contribute, check out our Git Repo below.">
       </About>
       <OpenSource />
