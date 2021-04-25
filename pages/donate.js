@@ -5,6 +5,7 @@ import DonateHero from '../components/DonateHero'
 import About from '../components/About'
 import ButtonTertiary from '../components/ButtonTertiary'
 import DonateModule from '../components/donate/DonateModule'
+import OpenSource from '../components/OpenSource'
 import { createClient } from "@supabase/supabase-js";
 import { useState, useEffect } from 'react'
 export default function Donate() {
@@ -41,16 +42,12 @@ export default function Donate() {
       </section>
       <About title = "We're Open Source" explain = "SimpleDonate is an open-source, non-profit project. If you'd like to contribute, check out our Git Repo below.">
       </About>
-      <section className = 'relative z-10 text-center max-w-screen-lg xl:max-w-screen-xl mx-auto'>
-        <div className = 'px-4 sm:px-6 md:px-8 pt-0 pb-24 -m-20'>
-          <ButtonTertiary path = '/' body = 'GitHub' />
-        </div>
-      </section>
+      <OpenSource />
     </>
   )
 }
 
-const Causes = ({ todo, onDelete }) => {
+const Causes = ({ todo }) => {
   return (
     <div className = 'cols-span-1'>
       <DonateModule 
