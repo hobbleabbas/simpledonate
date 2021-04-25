@@ -53,7 +53,7 @@ export default function DetailsModule(props) {
                     </div>
 				</dl>
 				<div class="grid grid-cols-1 gap-x-4 sm:gap-x-6 px-4 sm:px-6 py-4">
-                    <div class="w-full text-base font-medium rounded-lg bg-blue-700 hover:bg-blue-900 text-white py-3 text-center cursor-pointer transition-colors duration-200">Support Cause</div>
+                    <a href = '#donate' class="w-full text-base font-medium rounded-lg bg-blue-700 hover:bg-blue-900 text-white py-3 text-center cursor-pointer transition-colors duration-200">Support Cause</a>
                 </div>
 			</article>
 		</div>

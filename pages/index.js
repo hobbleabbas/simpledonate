@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero title = "See Where Your Donations Go" subtitle = "Make all of your donations in one place. See how much of your donation actually goes to charity, download tax receipts, and see proof of donation all in one place" />
+      <Hero title = "Transparent Donations, In One Place" subtitle = "By definition, the most effective charities are the ones that spend the least on fundraising. SimpleDonate helps you find them by providing a platform to list." />
       <About title = "What's the point?" explain  = "Unfortunately, there isn't a streamlined way to donate. Every charity has a different setup, where the money goes isn't transparent, and getting tax receipts is a pain. SimpleDonate fixes that." />
       <HowItWorks />
       <About title = "We're Open Source" explain = "SimpleDonate is an open-source, non-profit project. If you'd like to contribute, check out our Git Repo below.">

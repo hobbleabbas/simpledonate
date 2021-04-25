@@ -7,11 +7,12 @@ export default function DonateModule(props) {
 	const raised = props.amount
 
 	const progress = ((raised/goal)*100)+'%'
-	console.log(progress)
-	
+
 	const progressbar = {
 		'width': progress
 	}
+
+	const link = 'cause/' + props.id
 
   	return (
 	    <div className = 'w-full shadow rounded-md flex flex-col'>
@@ -33,7 +34,7 @@ export default function DonateModule(props) {
 		        	<a className = 'text-base text-1xl mb-4 font-bold'>By {props.charity}</a>
 		        </Link>
 				<p className = 'mb-4'></p>
-		        <Link href = 'cause/[id]' as = {'/cause/${props.id}'}>
+		        <Link href = {link}>
 		        	<a className = 'text-md text-blue-600 font-bold'>See More →</a>
 		        </Link>
 	        </div>
