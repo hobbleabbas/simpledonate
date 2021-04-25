@@ -7,16 +7,27 @@ import HowItWorks from '../components/home/HowItWorks'
 import Button from '../components/Button'
 import ButtonTertiary from '../components/ButtonTertiary'
 import { createClient } from "@supabase/supabase-js";
+import { useState, useEffect } from 'react'
+
 export default function Home() {
 
   const supabaseUrl = 'https://owxvnbvnbykpotvzuyxn.supabase.co';
   const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxOTA0NTk3MywiZXhwIjoxOTM0NjIxOTczfQ.7BBoxolFznYqeYC0B2UrsMzUjpUM2ZkWdVPiPKve62s';
   const supabase = createClient(supabaseUrl, supabaseKey);
-  const supadata = supabase.from("causes").select("title");
 
-  console.log('bruh')
-  console.log(supadata)
+  const [todos, setTodos] = useState([])
+  const [newTaskText, setNewTaskText] = useState('')
+  const [errorText, setError] = useState('')
 
+  useEffect(() => {
+    fetchTodos()
+  }, [])
+
+  const fetchTodos = async () => {
+    let { data: todos, error } = await supabase.from('Causes').select('*').order('id', true)
+    if (error) console.log('error', error)
+    else setTodos(todos)
+  }
 
   return (
     <>
@@ -26,6 +37,7 @@ export default function Home() {
       <HowItWorks />
       <About title = "We're Open Source" explain = "SimpleDonate is an open-source, non-profit project. If you'd like to contribute, check out our Git Repo below.">
       </About>
+      
       <section className = 'relative z-10 text-center max-w-screen-lg xl:max-w-screen-xl mx-auto'>
         <div className = 'px-4 sm:px-6 md:px-8 pt-0 pb-24 -m-20'>
           <ButtonTertiary path = 'https://github.com/hobbleabbas/simpledonate' body = 'GitHub' />
@@ -35,3 +47,4 @@ export default function Home() {
     </>
   )
 }
+

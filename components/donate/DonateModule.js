@@ -3,10 +3,14 @@ import Link from 'next/link'
 
 export default function DonateModule(props) {
 
-	// const progress = this.props.goal
+	const goal = props.goal
+	const raised = props.amount
 
+	const progress = ((raised/goal)*100)+'%'
+	console.log(progress)
+	
 	const progressbar = {
-		'width':'30%'
+		'width': progress
 	}
 
   	return (

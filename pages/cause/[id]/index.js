@@ -5,17 +5,14 @@ import About from '../../../components/About'
 import ChoosePlan from '../../../components/cause/ChoosePlan'
 import Button from '../../../components/Button'
 import ButtonTertiary from '../../../components/ButtonTertiary'
+import OpenSource from '../../../components/OpenSource'
 import { createClient } from "@supabase/supabase-js";
+
 export default function Home() {
 
   const supabaseUrl = 'https://owxvnbvnbykpotvzuyxn.supabase.co';
   const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxOTA0NTk3MywiZXhwIjoxOTM0NjIxOTczfQ.7BBoxolFznYqeYC0B2UrsMzUjpUM2ZkWdVPiPKve62s';
   const supabase = createClient(supabaseUrl, supabaseKey);
-  const supadata = supabase.from("causes").select("title");
-
-  console.log('bruh')
-  console.log(supadata)
-
 
   return (
     <>
@@ -26,12 +23,7 @@ export default function Home() {
       <ChoosePlan bPlan = '25' bInterval = 'Per Month' cPlan = '1000' cInterval = 'Once' />
       <About title = "We're Open Source" explain = "SimpleDonate is an open-source, non-profit project. If you'd like to contribute, check out our Git Repo below.">
       </About>
-      <section className = 'relative z-10 text-center max-w-screen-lg xl:max-w-screen-xl mx-auto'>
-        <div className = 'px-4 sm:px-6 md:px-8 pt-0 pb-24 -m-20'>
-          <ButtonTertiary path = 'https://github.com/hobbleabbas/simpledonate' body = 'GitHub' />
-        </div>
-      </section>
-
+      <OpenSource />
     </>
   )
 }
