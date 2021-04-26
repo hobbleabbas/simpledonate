@@ -9,7 +9,7 @@ export default function CauseHero(props) {
         	<h1 className = 'text-4xl sm:text-4xl lg:text-5xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-4 sm:mt-8 sm:mb-6'>{props.title}</h1>
         	<p className = 'text-blue-500 pb-4'>{props.location.toUpperCase()} | <span className = 'text-gray-500'>{props.tldr}</span></p>
         	<div class="flex flex-row">
-		  		<div className = 'w-2/3 mr-8 rounded-lg'>
+		  		<div className = 'w-2/3 mr-8 rounded-lg overflow-hidden'>
 		  			<iframe className = 'w-full h-full' src="https://www.youtube.com/embed/DZQ0LMsgkg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		  		</div>
 		  		<div className = 'w-1/3'>
