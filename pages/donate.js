@@ -6,17 +6,14 @@ import About from '../components/About'
 import ButtonTertiary from '../components/ButtonTertiary'
 import DonateModule from '../components/donate/DonateModule'
 import OpenSource from '../components/OpenSource'
-import { createClient } from "@supabase/supabase-js";
+import { supabase } from "../utils/supabaseClient";
 import { useState, useEffect } from 'react'
+
 export default function Donate() {
 
   const [todos, setTodos] = useState([])
   const [newTaskText, setNewTaskText] = useState('')
   const [errorText, setError] = useState('')
-
-  const supabaseUrl = 'https://owxvnbvnbykpotvzuyxn.supabase.co';
-  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxOTA0NTk3MywiZXhwIjoxOTM0NjIxOTczfQ.7BBoxolFznYqeYC0B2UrsMzUjpUM2ZkWdVPiPKve62s';
-  const supabase = createClient(supabaseUrl, supabaseKey);
 
   useEffect(() => {
     fetchTodos()
@@ -27,6 +24,7 @@ export default function Donate() {
     if (error) console.log('error', error)
     else setTodos(todos)
   }
+
   return (
     <>
       <Navbar />
