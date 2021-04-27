@@ -12,11 +12,12 @@ export default function DonateModule(props) {
 		'width': progress
 	}
 
-	const link = 'cause/' + props.id
+	const causeLink = 'cause/' + props.id
+	const charityLink = 'charity/' + props.charityId
 
   	return (
 	    <div className = 'w-full shadow rounded-md flex flex-col'>
-	    	<img className = 'rounded-t-md' src = 'https://www.dccomics.com/sites/default/files/Char_Gallery_Batman_DTC1018_6053f2162bdf03.97426416.jpg'></img>
+	    	<img className = 'rounded-t-md' src = {props.image}></img>
 	    	<div className = 'justify-left p-8'>
 		        <p className = 'text-blue-500 pb-2'>${props.amount} of ${props.goal} raised.</p>
 		        <div class="relative pt-1">
@@ -30,11 +31,11 @@ export default function DonateModule(props) {
 		        <p className = 'text-base text-1xl mb-4'>
 		            {props.description}
 		        </p>
-		        <Link href = 'cause/[id]' as = {'/cause/${props.id}'}>
+		        <Link href = {charityLink}>
 		        	<a className = 'text-base text-1xl mb-4 font-bold'>By {props.charity}</a>
 		        </Link>
 				<p className = 'mb-4'></p>
-		        <Link href = {link}>
+		        <Link href = {causeLink}>
 		        	<a className = 'text-md text-blue-600 font-bold'>See More →</a>
 		        </Link>
 	        </div>

@@ -21,7 +21,7 @@ export default function DetailsModule(props) {
 				<dl className = 'transition-opacity duration-1500 delay-500 flex flex-wrap divide-y divide-gray-200 border-b border-gray-200 '>
 					<div className = 'px-4 sm:px-6 pb-6 pt-6'>
 						<dd className = 'text-sm sm:text-base'>
-							{props.days} Days Left
+							Ends {props.ends}
 						</dd>
 					</div>
 					<div class="w-full flex-none flex items-baseline px-4 sm:px-6 py-4">
