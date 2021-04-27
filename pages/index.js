@@ -11,23 +11,7 @@ import { useState, useEffect } from 'react'
 
 export default function Home() {
 
-  const supabaseUrl = 'https://owxvnbvnbykpotvzuyxn.supabase.co';
-  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxOTA0NTk3MywiZXhwIjoxOTM0NjIxOTczfQ.7BBoxolFznYqeYC0B2UrsMzUjpUM2ZkWdVPiPKve62s';
-  const supabase = createClient(supabaseUrl, supabaseKey);
-
-  const [todos, setTodos] = useState([])
-  const [newTaskText, setNewTaskText] = useState('')
-  const [errorText, setError] = useState('')
-
-  useEffect(() => {
-    fetchTodos()
-  }, [])
-
-  const fetchTodos = async () => {
-    let { data: todos, error } = await supabase.from('Causes').select('*').order('id', true)
-    if (error) console.log('error', error)
-    else setTodos(todos)
-  }
+  
 
   return (
     <>
