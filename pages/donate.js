@@ -20,7 +20,7 @@ export default function Donate() {
   }, [])
 
   const fetchTodos = async () => {
-    let { data: todos, error } = await supabase.from('Causes').select('*').order('id', true)
+    let { data: todos, error } = await supabase.from('causes').select('*').order('id', true)
     if (error) console.log('error', error)
     else setTodos(todos)
   }
@@ -51,10 +51,12 @@ const Causes = ({ todo }) => {
       <DonateModule 
         amount = {todo.amountRaised} 
         goal = {todo.amountGoal}
-        title = {todo.title}
-        description = {todo.description}
+        title = {todo.causeTitle}
+        description = {todo.causeShortDescription}
         id = {todo.id}
-        charity = {todo.charity}
+        charity = {todo.charityName}
+        charityId = {todo.charity}
+        image = {todo.image}
       />
     </div>
   )

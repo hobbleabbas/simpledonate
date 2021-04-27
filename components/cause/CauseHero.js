@@ -3,6 +3,9 @@ import ButtonWrapper from '../ButtonWrapper'
 import DetailsModule from './DetailsModule'
 
 export default function CauseHero(props) {
+
+  const progress = ((props.amountRaised/props.amountGoal)*100) + '%'
+
   return (
     <header className = 'relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto pb-16 -mt-8'>
         <div className = 'px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8'>
@@ -13,7 +16,7 @@ export default function CauseHero(props) {
 		  			<iframe className = 'w-full h-full' src="https://www.youtube.com/embed/DZQ0LMsgkg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		  		</div>
 		  		<div className = 'w-1/3'>
-		  			<DetailsModule location = {props.location} backers = '150' days = '5' progress = '70%' goal = '8000' amount = '5000'/>
+		  			<DetailsModule location = {props.location} backers = '150' ends = {props.ends} progress = {progress} goal = {props.amountGoal} amount = {props.amountRaised}/>
 		  		</div>
 			</div>
         </div>
