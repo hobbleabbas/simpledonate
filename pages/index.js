@@ -24,7 +24,6 @@ export default function Home() {
           <ButtonTertiary path = 'https://github.com/hobbleabbas/simpledonate' body = 'GitHub' />
         </div>
       </section>
-
     </>
   )
 }
