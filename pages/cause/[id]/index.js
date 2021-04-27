@@ -6,13 +6,9 @@ import ChoosePlan from '../../../components/cause/ChoosePlan'
 import Button from '../../../components/Button'
 import ButtonTertiary from '../../../components/ButtonTertiary'
 import OpenSource from '../../../components/OpenSource'
-import { createClient } from "@supabase/supabase-js";
+import { supabase } from '../../../utils/supabaseClient'
 
 export default function Home() {
-
-  const supabaseUrl = 'https://owxvnbvnbykpotvzuyxn.supabase.co';
-  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxOTA0NTk3MywiZXhwIjoxOTM0NjIxOTczfQ.7BBoxolFznYqeYC0B2UrsMzUjpUM2ZkWdVPiPKve62s';
-  const supabase = createClient(supabaseUrl, supabaseKey);
 
   return (
     <>

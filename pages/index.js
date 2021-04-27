@@ -6,12 +6,9 @@ import About from '../components/About'
 import HowItWorks from '../components/home/HowItWorks'
 import Button from '../components/Button'
 import ButtonTertiary from '../components/ButtonTertiary'
-import { createClient } from "@supabase/supabase-js";
 import { useState, useEffect } from 'react'
 
 export default function Home() {
-
-  
 
   return (
     <>
