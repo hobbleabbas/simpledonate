@@ -9,8 +9,8 @@ export default function Hero(props) {
         	<p className = 'max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-4 sm:mb-4'>{props.subtitle}
         	</p>
             <div className = 'mb-4'>
-            <dd class="text-lg sm:text-xl font-medium text-gray-700 rounded-full py-1 pl-2 pr-4 flex items-center mb-2">
-                <svg width="20" height="20" fill="currentColor" class="hidden sm:block text-green-500 mr-2">
+            <dd className="text-lg sm:text-xl font-medium text-gray-700 rounded-full py-1 pl-2 pr-4 flex items-center mb-2">
+                <svg width="20" height="20" fill="currentColor" className="hidden sm:block text-green-500 mr-2">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
                 </svg>
                 Tax Receipts (Where Available)
@@ -21,8 +21,8 @@ export default function Hero(props) {
                 </svg>
                 Proof Of Donation
             </dd>
-            <dd class="text-lg sm:text-xl font-medium text-gray-700 rounded-full py-1 pl-2 pr-4 flex items-center">
-                <svg width="20" height="20" fill="currentColor" class="hidden sm:block text-green-500 mr-2">
+            <dd className="text-lg sm:text-xl font-medium text-gray-700 rounded-full py-1 pl-2 pr-4 flex items-center">
+                <svg width="20" height="20" fill="currentColor" className="hidden sm:block text-green-500 mr-2">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
                 </svg>
                 Recurring Donations

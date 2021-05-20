@@ -20,9 +20,9 @@ export default function DonateModule(props) {
 	    	<img className = 'rounded-t-md' src = {props.image}></img>
 	    	<div className = 'justify-left p-8'>
 		        <p className = 'text-blue-500 pb-2'>${props.amount} of ${props.goal} raised.</p>
-		        <div class="relative pt-1">
-				  <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
-				    <div style={progressbar} class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+		        <div className="relative pt-1">
+				  <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+				    <div style={progressbar} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
 				  </div>
 				</div>
 		        <h3 className = 'text-2xl sm:text-2xl lg:text-2xl leading-none font-extrabold text-gray-900 tracking-tight mb-2'>
