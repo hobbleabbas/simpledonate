@@ -18,7 +18,6 @@ export default function Home() {
       <HowItWorks />
       <About title = "We're Open Source" explain = "SimpleDonate is an open-source, non-profit project. If you'd like to contribute, check out our Git Repo below.">
       </About>
-      
       <section className = 'relative z-10 text-center max-w-screen-lg xl:max-w-screen-xl mx-auto'>
         <div className = 'px-4 sm:px-6 md:px-8 pt-0 pb-24 -m-20'>
           <ButtonTertiary path = 'https://github.com/hobbleabbas/simpledonate' body = 'GitHub' />
