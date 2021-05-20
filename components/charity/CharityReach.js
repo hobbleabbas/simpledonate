@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
 export default function CharityReach(props) {
-    console.log(props.status)
+    
+    const status = props.status
 
     return (
         <>
