@@ -1,5 +1,6 @@
 import Spacer from '../Spacer'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function DonateModule(props) {
 

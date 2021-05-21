@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Button(props) {
   return (
     <Link href = {props.path}>
-    	<a className = 'w-full sm:w-auto flex-none bg-blue-700 hover:bg-blue-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200'>
+    	<a className = 'inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-700 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 duration-200'>
     		{props.body} {props.arr}
     	</a>
     </Link>
