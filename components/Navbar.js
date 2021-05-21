@@ -4,6 +4,7 @@ import { SearchIcon } from '@heroicons/react/solid'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import Button from '../components/Button'
 import ButtonSecondary from '../components/ButtonSecondary'
+import Link from 'next/link'
 
 const user = {
   name: 'Chelsea Hagon',
@@ -43,13 +44,15 @@ export default function Example() {
               <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
                 <div className="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div className="flex-shrink-0 flex items-center">
-                    <a href="/">
-                      <img
-                        className="block h-8 w-auto"
-                        src="/static/SimpleDonateLogo.png"
-                        alt="Workflow"
-                      />
-                    </a>
+                    <Link href="/" >
+                      <a>
+                        <img
+                          className="block h-8 w-auto"
+                          src="/static/SimpleDonateLogo.png"
+                          alt="Workflow"
+                        />
+                      </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="min-w-0 flex-1 md:px-8 lg:px-0 xl:col-span-6">
