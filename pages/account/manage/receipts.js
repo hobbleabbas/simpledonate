@@ -3,6 +3,7 @@ import Navbar from '../../../components/Navbar'
 import Hero from '../../../components/account/AccountHero'
 import ReceiptWrapper from '../../../components/account/ReceiptWrapper'
 import Tabs from '../../../components/account/Tabs'
+import SecondaryNavigation from '../../../components/account/SecondaryNavigation'
 
 const index = () => {
 
@@ -12,8 +13,8 @@ const index = () => {
 	return (
 		<>
 			<Navbar />
-			<Hero name = {name} subtitle = 'This is your account. Here, you can access tax receipts, manage recurring donations, get proof of donation, and more.' />
-			<Tabs />
+			<SecondaryNavigation />
+			<Hero name = {name} subtitle = 'RECEIPTS' />
 			<ReceiptWrapper />
 		</>
 	)

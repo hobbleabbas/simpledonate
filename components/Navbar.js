@@ -92,7 +92,7 @@ export default function Example() {
                       <>
                         <div>
                           <Menu.Button className = 'mr-4'>
-                            <ButtonSecondary path = '/account/Bapu' body = 'Profile'/>
+                            <ButtonSecondary path = '/account' body = 'Profile'/>
                           </Menu.Button>
                         </div>
                         
@@ -138,6 +138,7 @@ export default function Example() {
           </>
         )}
       </Popover>
+
     </>
   )
 }
