@@ -94,7 +94,7 @@ export default function Example() {
                     {({ open }) => (
                       <>
                         <div>
-                          <Menu.Button className = 'mr-4'>
+                          <Menu.Button className = 'mr-2'>
                             <ButtonSecondary path = '/account' body = 'Profile'/>
                           </Menu.Button>
                         </div>
